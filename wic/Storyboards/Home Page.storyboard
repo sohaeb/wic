@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PZz-hd-QxD">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Twitter Table View Controller-->
+        <scene sceneID="m43-2X-Csw">
+            <objects>
+                <tableViewController id="WbV-gr-awd" customClass="TwitterTableViewController" customModule="windsorislamiccouncil" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rLg-vb-VWp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="472"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FJa-id-m0p">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJa-id-m0p" id="wmY-PC-vzn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WbV-gr-awd" id="N3L-lr-EeI"/>
+                            <outlet property="delegate" destination="WbV-gr-awd" id="bto-kR-Dwh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0VH-mc-l66" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18377" y="911"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="geI-Wz-1RC">
+            <objects>
+                <viewController id="PZz-hd-QxD" userLabel="Home" customClass="HomeViewController" customModule="windsorislamiccouncil" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxj-8t-78K"/>
+                        <viewControllerLayoutGuide type="bottom" id="8hj-ct-NAg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9tX-CA-BEf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="7RU-4F-yWk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRY-NV-S8s" userLabel="top">
+                                <rect key="frame" x="0.0" y="3" width="320" height="48"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wic_banner-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kc8-b1-pAT">
+                                        <rect key="frame" x="0.0" y="3" width="320" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Kc8-b1-pAT" firstAttribute="leading" secondItem="rRY-NV-S8s" secondAttribute="leading" id="868-Mh-v06"/>
+                                    <constraint firstItem="Kc8-b1-pAT" firstAttribute="top" secondItem="rRY-NV-S8s" secondAttribute="top" constant="3" id="RlP-YO-RZq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kc8-b1-pAT" secondAttribute="bottom" id="kkJ-bq-uvm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kc8-b1-pAT" secondAttribute="trailing" id="zH2-Od-WTf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j98-i3-xBe" userLabel="bot">
+                                <rect key="frame" x="0.0" y="47" width="320" height="472"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4A8-v8-3Qp">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="472"/>
+                                        <connections>
+                                            <segue destination="WbV-gr-awd" kind="embed" id="vcN-VJ-7fe"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4A8-v8-3Qp" secondAttribute="trailing" id="FPh-aZ-vTG"/>
+                                    <constraint firstAttribute="bottom" secondItem="4A8-v8-3Qp" secondAttribute="bottom" id="Gjs-s8-NrX"/>
+                                    <constraint firstItem="4A8-v8-3Qp" firstAttribute="leading" secondItem="j98-i3-xBe" secondAttribute="leading" id="Wbk-wM-efS"/>
+                                    <constraint firstItem="4A8-v8-3Qp" firstAttribute="top" secondItem="j98-i3-xBe" secondAttribute="top" id="kbK-yU-D5v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7RU-4F-yWk" secondAttribute="bottom" id="0Sg-qD-4md"/>
+                            <constraint firstAttribute="trailing" secondItem="j98-i3-xBe" secondAttribute="trailing" id="6iF-DD-h2c"/>
+                            <constraint firstAttribute="trailing" secondItem="rRY-NV-S8s" secondAttribute="trailing" id="9yR-QP-J8P"/>
+                            <constraint firstItem="j98-i3-xBe" firstAttribute="top" secondItem="rRY-NV-S8s" secondAttribute="bottom" constant="-4" id="C9H-Pb-SwH"/>
+                            <constraint firstItem="rRY-NV-S8s" firstAttribute="leading" secondItem="9tX-CA-BEf" secondAttribute="leading" id="CqM-i5-PMV"/>
+                            <constraint firstItem="7RU-4F-yWk" firstAttribute="top" secondItem="9tX-CA-BEf" secondAttribute="top" id="DM1-je-ukG"/>
+                            <constraint firstItem="7RU-4F-yWk" firstAttribute="leading" secondItem="9tX-CA-BEf" secondAttribute="leading" id="EMF-IX-TEL"/>
+                            <constraint firstAttribute="trailing" secondItem="7RU-4F-yWk" secondAttribute="trailing" id="aw6-p0-lBf"/>
+                            <constraint firstItem="j98-i3-xBe" firstAttribute="leading" secondItem="9tX-CA-BEf" secondAttribute="leading" id="gug-HM-OgI"/>
+                            <constraint firstItem="8hj-ct-NAg" firstAttribute="top" secondItem="j98-i3-xBe" secondAttribute="bottom" id="hlc-7d-bPH"/>
+                            <constraint firstItem="rRY-NV-S8s" firstAttribute="top" secondItem="9tX-CA-BEf" secondAttribute="top" constant="3" id="zYs-cy-2bs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7RU-4F-yWk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="8uS-Lo-hrd" userLabel="Home">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="tabBar" destination="8uS-Lo-hrd" id="Dil-lo-ClU"/>
+                        <outlet property="top_banner_image" destination="Kc8-b1-pAT" id="eK8-no-MMT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="At0-jF-FBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18401" y="164"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="414" height="736"/>
+        <image name="home" width="20" height="18"/>
+        <image name="wic_banner-1" width="239" height="45"/>
+    </resources>
+</document>

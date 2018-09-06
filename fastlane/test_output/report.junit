@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='windsorislamiccouncilUITests.xctest' tests='1' failures='0'>
+  <testsuite name='windsorislamiccouncilUITests.windsorislamiccouncilUITests' tests='1' failures='0'>
+    <testcase classname='windsorislamiccouncilUITests.windsorislamiccouncilUITests' name='testExample' time='23.027'/>
+  </testsuite>
+</testsuites>
