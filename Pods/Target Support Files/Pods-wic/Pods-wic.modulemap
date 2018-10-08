@@ -1,6 +1,0 @@
-framework module Pods_wic {
-  umbrella header "Pods-wic-umbrella.h"
-
-  export *
-  module * { export * }
-}
